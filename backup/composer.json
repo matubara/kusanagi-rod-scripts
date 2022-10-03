@@ -1,0 +1,288 @@
+{
+    "name": "my/project",
+    "description": "Project template for Drupal 8 projects with composer",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "",
+            "role": ""
+        }
+    ],
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8",
+	      "options": {
+    "ssl": {
+      "verify_peer": false
+    }
+  }
+        },
+        "asset-packagist": {
+            "type": "composer",
+            "url": "https://asset-packagist.org",
+	      "options": {
+    "ssl": {
+      "verify_peer": false
+    }
+  }
+        },
+        "drupal-rector": {
+            "type": "git",
+            "url": "https://github.com/palantirnet/drupal-rector.git"
+        },
+        "loremdata": {
+            "type": "package",
+            "package": {
+                "name": "oliver/loremdata",
+                "version": "1.0.0",
+                "type": "drupal-drush",
+                "dist": {
+                    "url": "web/modules/custom/loremdata",
+                    "type": "path"
+                }
+            }
+        },
+        "colorbutton": {
+            "type": "package",
+            "package": {
+                "name": "oliver/colorbutton",
+                "version": "1.0.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/colorbutton/releases/colorbutton_4.16.2.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        "jquery-ui-touch-punch": {
+            "type": "package",
+            "package": {
+                "name": "oliver/jquery-ui-touch-punch",
+                "version": "1.0.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/furf/jquery-ui-touch-punch/archive/refs/heads/master.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        "panelbutton": {
+            "type": "package",
+            "package": {
+                "name": "oliver/panelbutton",
+                "version": "1.0.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/panelbutton/releases/panelbutton_4.16.2.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        "templates": {
+            "type": "package",
+            "package": {
+                "name": "oliver/templates",
+                "version": "1.0.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/oliverhuynh/templates/archive/refs/heads/master.zip",
+                    "type": "zip"
+                }
+            }
+        }
+    },
+    "require": {
+        "php": "^5.5.9|>=7.0.8",
+        "composer/installers": "^1.2.0",
+        "cweagans/composer-patches": "^1.6.5",
+        "drupal/address": "1.9.0",
+        "drupal/addtoany": "1.15.0",
+        "drupal/admin_toolbar": "*",
+        "drupal/better_exposed_filters": "5.0.0-beta3",
+        "drupal/blocache": "^1.1",
+        "drupal/block_class": "1.3.0",
+        "drupal/blockgroup": "1.5.0",
+        "drupal/ckeditor_templates": "1.2.0",
+        "drupal/ckeditor_templates_ui": "1.4.0",
+        "drupal/codemirror_editor": "1.7.0",
+        "drupal/colorbutton": "1.3.0",
+        "drupal/commerce": "2.27.0",
+        "drupal/commerce_stripe": "1.x-dev",
+        "drupal/computed_field": "^2.0",
+        "drupal/config_split": "^1.7",
+        "drupal/content_sync": "3.0.x",
+        "drupal/core-composer-scaffold": "^9",
+        "drupal/core-project-message": "^9",
+        "drupal/core-recommended": "^9.3",
+        "drupal/ctools": "3.7.0",
+        "drupal/devel": "*",
+        "drupal/devel_entity_updates": "^3.0",
+        "drupal/devel_php": "^1.3",
+        "drupal/drush_language": "^1.0@RC",
+        "drupal/entity": "1.2.0",
+        "drupal/entity_reference_revisions": "1.9.0",
+        "drupal/eu_cookie_compliance": "^1.18",
+        "drupal/extlink": "1.6.0",
+        "drupal/field_group": "^3.2",
+        "drupal/google_tag": "1.4.0",
+        "drupal/inline_entity_form": "1.0.0-rc9",
+        "drupal/jquery_ui": "1.4.0",
+        "drupal/jquery_ui_accordion": "1.1.0",
+        "drupal/jquery_ui_datepicker": "1.1.0",
+        "drupal/jquery_ui_slider": "1.1.0",
+        "drupal/jquery_ui_touch_punch": "*",
+        "drupal/json_field": "^1.0@RC",
+        "drupal/mailsystem": "4.3.0",
+        "drupal/markup": "^1.0@beta",
+        "drupal/metatag": "1.16.0",
+        "drupal/panelbutton": "1.4.0",
+        "drupal/password_policy": "^3.0",
+        "drupal/password_strength": "^2.0@beta",
+        "drupal/pathauto": "1.8.0",
+        "drupal/profile": "1.3.0",
+        "drupal/redirect": "1.6.0",
+        "drupal/sharethis": "2.0.0-beta5",
+        "drupal/state_machine": "1.5.0",
+        "drupal/svg_image": "^1.15",
+        "drupal/swiftmailer": "2.0.0",
+        "drupal/token": "1.9.0",
+        "drupal/translated_config": "^1.0",
+        "drupal/twig_field": "1.1.0",
+        "drupal/twig_field_value": "*",
+        "drupal/twig_tweak": "2.x-dev",
+        "drupal/twiggy": "^1.0",
+        "drupal/unused_modules": "^1.3",
+        "drupal/upgrade_status": "^3.11",
+        "drupal/views_accordion": "*",
+        "drupal/views_field_view": "1.0.0-beta3",
+        "drupal/views_fieldsets": "3.4.0",
+        "drupal/webform": "^6.1",
+        "drupal/webform_views": "^5.0@alpha",
+        "drupal/xmlsitemap": "^1.1",
+        "drush/drush": "^10.6",
+        "juampynr/syncdb": "dev-master",
+        "mpdf/mpdf": "^8.0",
+        "nymedia/drupal_settings": "^1.0",
+        "oliver/colorbutton": "*",
+        "oliver/jquery-ui-touch-punch": "*",
+        "oliver/loremdata": "^1.0",
+        "oliver/panelbutton": "*",
+        "oliver/templates": "*",
+        "phpoffice/phpspreadsheet": "^1.20",
+        "phpunit/phpunit": "7",
+        "symfony/css-selector": "4.0",
+        "wikimedia/composer-merge-plugin": "^2.0"
+    },
+    "config": {
+        "sort-packages": true,
+        "platform-check": false,
+        "platform": {
+            "php": "7.4.3"
+        }
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "extra": {
+        "enable-patching": true,
+        "composer-exit-on-patch-failure": false,
+        "patches": {
+            "drupal/content_sync": {
+              "patches/content_sync.1638901199.patch": "patches/content_sync.1638901199.patch"
+            },
+            "drupal/core": {
+              "1635106552": "patches/core.1635106552.patch",
+              "1638194064": "patches/core.1638194064.patch",
+              "More reversed fix": "patches/core.1636463219.patch",
+              "No media warning": "patches/core.1637209586.patch",
+              "SQL": "patches/sql_mode_d9_fullgroupby_3098307.patch"
+            },
+            "drupal/token": {
+              "source": "https://www.drupal.org/files/issues/2018-10-16/token-2997674-10.patch"
+            },
+            "drupal/codemirror_editor": {
+              "JS bug": "https://www.drupal.org/files/issues/2019-05-08/library_not_loaded_alert-3051881-8.patch"
+            },
+            "drupal/twiggy": {
+              "1636913105": "patches/twiggy.1636913105.patch"
+            },
+            "drupal/password_policy": {
+              "1634745442": "patches/password_policy.1634745442.patch"
+            },
+            "drupal/commerce": {
+              "No keep the CC": "https://www.drupal.org/files/issues/2021-02-08/commerce-2871483-optional_cc_storage-50-refresh.patch",
+              "Clear the CC always, no remember anything at all!": "patches/commerce.1636983573.patch"
+            },
+            "drupal/commerce_stripe": {
+              "1638619156": "patches/commerce_stripe.1638619156.patch",
+              "1638691547": "patches/commerce_stripe.1638691547.patch",
+              "1638701854": "patches/commerce_stripe.1638701854.patch",
+              "ja-JP": "patches/commerce_stripe.1638870138.patch",
+              "1639221347": "patches/commerce_stripe.1639221347.patch",
+              "refund": "patches/commerce_stripe.1639387477.patch"
+            },
+            "drupal/webform": {
+              "1639670009": "patches/webform.1639670009.patch"
+            }
+        },
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "./web/"
+            }
+        },
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
+        "installer-paths": {
+            "drush/Commands/{$name}": [
+                "type:drupal-drush"
+            ],
+            "./web/core": [
+                "type:drupal-core"
+            ],
+            "./web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "./web/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "./web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "./web/profiles/custom/{$name}": [
+                "type:drupal-custom-profile"
+            ],
+            "./web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "./web/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ],
+            "./web/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ]
+        },
+        "merge-plugin": {
+          "include": [
+            "web/modules/contrib/webform/composer.libraries.json",
+            "web/modules/custom/loremdata/composer.json"
+          ],
+          "merge-extra": true,
+          "merge-extra-deep": true,
+          "merge-scripts": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "mglaman/drupal-check": "^1.1",
+        "palantirnet/drupal-rector": "^0.11.3",
+        "phpstan/phpstan": "0.12.93",
+        "rector/rector": "0.11.39"
+    }
+}
