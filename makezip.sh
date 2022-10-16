@@ -13,4 +13,5 @@ sw.sh \
 docker-backup.sh \
 remove-kusanagi.sh \
 makedockerbackup.sh \
+set-hosts-for-docker.sh \
 makezip.sh

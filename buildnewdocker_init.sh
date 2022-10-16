@@ -65,9 +65,9 @@ elif [ $# -eq 2 ] && [ "$1" = "sw" ];then
     fi
     echo "現在起動中のコンテナをすべて停止する"
     docker stop $(docker ps -q)
-    cd /home/matsubara/$2
+    cd ${HOME_DIR}$2
     kusanagi-docker start
-    cd /home/matsubara
+    cd ${HOME_DIR}
     echo "完了しました"
     exit 0
 elif [ "$1" = "restore-dockerimg" ] || [ "$1" = "restore-dockerimg2" ];then

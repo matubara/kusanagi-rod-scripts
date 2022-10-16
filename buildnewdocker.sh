@@ -463,6 +463,15 @@ docker cp ${HOME_DIR}backup/adminer.php \
 #####################################
 
 #####################################
+#echo "Add ip address to /etc/hosts file in ${TARGET}_php container to be able to debug using XDEBUG."
+if [ -n "$debugmode" ];then read -p "Press [Enter] key to move on to the next."; fi
+#hostsファイルにIPアドレスを追加するためのスクリプト
+docker cp ${HOME_DIR}backup/initialize-hosts.sh \
+	${TARGET}_php:/home/kusanagi/${TARGET}/initialize-hosts.sh
+
+#####################################
+
+#####################################
 cd ${HOME_DIR}${TARGET}
 echo " RESTART DOCKER-CONTAINER BY KUSANAGI-ROD COMMAND."
 echo "現在のディレクトリ： ${HOME_DIR}${TARGET}"
