@@ -151,7 +151,7 @@ if [ -n "$debugmode" ];then read -p "Press [Enter] key to move on to the next.";
 cd ${HOME_DIR}${TARGET}
 kusanagi-docker wp search-replace \
 	${DB_PROTCOL}://${DB_FQDN} \
-	http://${TARGET}${TLD}
+	http://${FQDN}
 kusanagi-docker wp search-replace \
 	${DB_FQDN} \
 	${TARGET}${TLD}
